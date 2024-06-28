@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="heading">
+            <h1>Library</h1>
+        </div>
+
+        <div class="sidebar">
+            <form id="bookForm">
+                <label for="bookTitle">Title</label>
+                <input type="text" class="bookTitleInput" required>
+
+                <label for="bookAuthor">Author</label>
+                <input type="text" class="bookAuthorInput" required>
+
+                <label for="bookPages">Pages : </label>
+                <input type="number" class="bookPagesInput" required>
+
+                <label for="bookCheck">Read</label>
+                <input type="checkbox" class="bookReadInput">
+            </form>
+            <button type="button" onclick="addBookToLibrary()">Add Book</button>
+        </div>
+
+        <div class="display">
+            <div class="card">
+                <div class="title">The Hobbit</div>
+                <div class="author">J.R.R. Tolkien</div>
+                <div class="pages">391 Pages</div>
+                <div class="read-container">
+                    <label for="read-checkbox">Read:</label>
+                    <input type="checkbox" name="checkbox" id="read">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
