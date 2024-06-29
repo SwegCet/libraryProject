@@ -69,6 +69,23 @@ function addBookToLibrary() {
             readDisplay.name = `read-${index}`;
             readDisplay.checked = newBook.read;
 
+            //Create button to remove Book from Library
+            const removeButton = document.createElement("button");
+            removeButton.className = 'remove-button';
+            removeButton.textContent = 'Remove Book';
+            //Using addEventListner to pass the function
+            removeButton.addEventListener('click', () => {
+                //I think this is how I delete it
+                removeButton.dataset.index = index;
+
+                //Removing the book at the specific array
+                const bookIndex = removeButton.dataset.index;
+                myLibrary.splice(bookIndex, 1);
+
+                //Call display book again to update List
+                displayBook();
+            });
+
             //Last thing to do is appendChild into card
             readContainerDisplay.appendChild(labelDisplay);
             readContainerDisplay.appendChild(readDisplay);
@@ -77,6 +94,7 @@ function addBookToLibrary() {
             card.appendChild(authorDisplay);
             card.appendChild(pagesDisplay);
             card.appendChild(readContainerDisplay);
+            card.appendChild(removeButton);
 
             display.appendChild(card);
         });
