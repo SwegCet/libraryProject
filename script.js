@@ -1,11 +1,13 @@
 const myLibrary = []; //Empty Library Array
 
-// This is the constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+//This is a class
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 //This function loops through the array and displays each book on their own card
